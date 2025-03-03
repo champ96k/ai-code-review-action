@@ -1,6 +1,6 @@
-name: "AI Code Review"
+name: "Champ AI Code Review"
 description: "Uses Google Gemini AI to review PRs and comment feedback."
-author: "Your Name"
+author: "Tushar Nikam"
 branding:
   icon: "check-circle"
   color: "blue"
