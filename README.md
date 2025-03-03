@@ -7,13 +7,13 @@
 Add this to your `.github/workflows/ai_review.yml`:
 
 ```yaml
-name: AI Code Review
+name: Champ AI Code Review
 on: pull_request
 jobs:
   ai_review:
     runs-on: ubuntu-latest
     steps:
-      - name: Run AI Code Review
+      - name: Run Champ AI Code Review
         uses: your-username/ai-code-review-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
