@@ -1,4 +1,4 @@
-name: AI Code Review
+name: Champ AI Code Review
 on:
   pull_request:
     types: [opened, synchronize, reopened]
