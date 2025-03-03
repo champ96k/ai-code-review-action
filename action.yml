@@ -1,0 +1,16 @@
+name: "AI Code Review"
+description: "Uses Google Gemini AI to review PRs and comment feedback."
+author: "Your Name"
+branding:
+  icon: "check-circle"
+  color: "blue"
+inputs:
+  github_token:
+    description: "GitHub Token to access PR details"
+    required: true
+  google_api_key:
+    description: "Google Gemini API Key"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
