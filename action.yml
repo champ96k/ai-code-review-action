@@ -14,6 +14,8 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
-  args:
-    - ${{ inputs.github_token }}
-    - ${{ inputs.google_api_key }}
+  env:
+    INPUT_GITHUB_TOKEN: ${{ inputs.github_token }}
+    INPUT_GOOGLE_API_KEY: ${{ inputs.google_api_key }}
+    GITHUB_REPOSITORY: ${{ github.repository }}
+    GITHUB_EVENT_NUMBER: ${{ github.event.pull_request.number }}
