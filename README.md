@@ -9,6 +9,8 @@ A GitHub Action that automatically reviews pull requests using Google's Gemini A
 - 🔄 Runs automatically on pull requests
 - 🎯 Configurable to run on specific branches
 - 🔒 Secure handling of API keys
+- 🛠️ Improved workspace handling
+- 📦 Optimized Docker configuration
 
 ## Usage
 
@@ -36,7 +38,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run AI Code Review
-        uses: champ96k/ai-code-review-action@v1
+        uses: champ96k/ai-code-review-action@v1.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           google_api_key: ${{ secrets.GOOGLE_API_KEY }}
@@ -85,13 +87,31 @@ Here are some suggestions for improvement:
 
 ## Version History
 
-- v1.2: Fixed workspace path issues and improved argument handling
-- v1.1: Initial stable release
-- v1.0: First release
+### v1.2 (Latest)
+- 🐛 Fixed workspace path issues in Docker configuration
+- 🔧 Improved argument handling for better reliability
+- 📦 Updated Docker setup for better performance
+- 🛠️ Enhanced error handling and logging
+
+### v1.1
+- ✨ Added support for multiple file reviews
+- 🔍 Improved code analysis accuracy
+- 📝 Enhanced review comment formatting
+
+### v1.0
+- 🚀 Initial release
+- 🤖 Basic AI code review functionality
+- 🔒 Secure API key handling
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please feel free to submit a Pull Request. Here's how you can contribute:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## License
 
@@ -100,3 +120,16 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Support
 
 If you encounter any issues or have questions, please [open an issue](https://github.com/champ96k/ai-code-review-action/issues) on GitHub.
+
+## Latest Updates
+
+The latest version (v1.2) includes several improvements:
+- Fixed workspace path issues that were causing file not found errors
+- Improved Docker configuration for better reliability
+- Enhanced error handling and logging
+- Optimized performance with better workspace management
+
+To use the latest version, make sure to specify `@v1.2` in your workflow file:
+```yaml
+uses: champ96k/ai-code-review-action@v1.2
+```
