@@ -1,5 +1,9 @@
-FROM python:3.10
-WORKDIR /github/workspace
-COPY . /github/workspace
-RUN pip install google-generativeai requests
-ENTRYPOINT ["python", "review_code.py"]
+FROM python:3.10-slim
+
+WORKDIR /app
+
+COPY review_code.py requirements.txt /app/
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+ENTRYPOINT ["python", "/app/review_code.py"]
